@@ -1,0 +1,9 @@
+<extentreports>
+  <configuration>
+    <theme>Dark</theme>
+    <documentTitle>Extent Report</documentTitle>
+    <encoding>utf-8</encoding>
+    <protocol>HTTPS</protocol>
+    <!-- add more config as needed -->
+  </configuration>
+</extentreports>
