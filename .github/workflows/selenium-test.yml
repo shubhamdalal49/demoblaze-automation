@@ -14,10 +14,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up JDK 21
+    - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
-        java-version: '21'
+        java-version: '17'
+        distribution: 'temurin'
 
     - name: Build Project
       run: mvn clean install -DskipTests
@@ -33,7 +34,8 @@ jobs:
         username: ${{ secrets.MAIL_USERNAME }}
         password: ${{ secrets.MAIL_PASSWORD }}
         subject: Selenium Test Results
-        to: yourrecipient@example.com
+        # to: ${{ secrets.To_MAIL_PASSWORD }}
+        to: shubhamdalal0884@gmail.com
         from: ${{ secrets.MAIL_USERNAME }}
         body: | 
           Please find the attached Selenium Extent Report.
